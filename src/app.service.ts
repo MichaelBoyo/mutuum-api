@@ -57,9 +57,6 @@ export class AppService {
     }
   }
   handleMessage(telegramMessage: TelegramRequest) {
-    console.log('token', this.TOKEN);
-    console.log('Received message:', telegramMessage);
-    // Implement your logic here
     this.handleTelegramMessage(telegramMessage);
   }
 }

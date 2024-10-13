@@ -12,9 +12,6 @@ export class AppController {
   }
   @Post()
   postHello(@Body() telegramRequest: TelegramRequest) {
-    console.log('request');
-    console.log(telegramRequest); // Example: 127.0.0.1
-
     return this.appService.handleMessage(telegramRequest);
   }
 }
