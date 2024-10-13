@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Request } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { TelegramRequest } from './dto/telegram.dto';
 
@@ -7,9 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(@Request() request: Request): string {
-    console.log('request');
-    console.log(request); // Example: 127.0.0.1
+  getHello(): string {
     return this.appService.getHello();
   }
   @Post()
